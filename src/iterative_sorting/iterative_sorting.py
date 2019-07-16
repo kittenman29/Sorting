@@ -1,14 +1,14 @@
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
     # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
-        minIndex = i
-        for j in range(i+1, len(arr)):
-            if arr[j] < arr[minIndex]:
-                minIndex = j
-        # TO-DO: swap
-        if minIndex != i:
-            arr[i], arr[minIndex] = arr[minIndex], arr[i]
+    for u in range(len(arr)):
+        min_index = u
+
+        for s in range(u + 1, len(arr)):
+            if arr[s] < arr[min_index]:
+                min_index = s
+        
+        arr[u], arr[min_index] = arr[min_index], arr[u]
 
     return arr
 
